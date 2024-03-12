@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/memory.css">
+</head>
+<body>
+
+        <h1>Halloween Memory Game</h1>
+
+        <div id="difficulty">
+            <h2>Select how many images you want to remember</h2>
+            <div id="slider">
+                <h3>10</h3>
+                <input type="range" min="1" max="50" value="10">
+                <button>Play</button>
+            </div>
+        </div><!--end #difficulty-->
+
+        <div id="board">
+            <h3 class="result" id="matches">Click pumpkins and find matches</h3>
+            <div class="grid">
+                <!-- where tiles for game will appear -->
+            </div>
+        </div>
+    
+    <script src="js/memory.js"></script>
+    
+</body>
+</html>

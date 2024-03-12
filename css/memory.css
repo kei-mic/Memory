@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 40px;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #F9F3F1;
+    color: #1F1A38;
+}
+h1{
+    text-align: center;
+    margin: 32px;
+    border-bottom: 3px solid #F4A261;
+    margin-bottom: 50px;
+}
+
+/* game board */
+#board{
+    margin:16px auto;
+    padding: 32px;
+    visibility: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #1f1a381c;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 500px; */
+    max-width: 1000px;
+    gap: 10px;
+    margin: 0 auto;
+}
+/* cards */
+img {
+    height: 100px;
+    width: 100px;
+}
+/* difficulty div */
+#difficulty{
+    padding: 32px;
+    margin: 0 auto;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 900px;
+    box-shadow: 5px 5px 10px #1f1a381c;
+}
+h2{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-style: italic;
+}
+button {
+    padding: 8px 24px;
+    margin: 8px;
+    border-radius: 8px;
+    border-color: #F4A261;
+    color: #1F1A38;
+    background-color: #F4A261;
+    box-shadow: 2px 4px 4px #e3d2ccba;
+    font-weight: 600;
+    font-size: 16px;
+}
+/* difficulty range */
+#slider{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 90%;
+    height: 16px; 
+    background: #E3D2CC; 
+    outline: none;
+    opacity: 0.7; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+    border-radius: 8px;
+    margin: auto 16px;
+}
+input::-webkit-slider-thumb {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #6F4964;
+    cursor: pointer; 
+    border-radius: 25px;
+}
+  
+input::-moz-range-thumb {
+    width: 25px; 
+    height: 25px; 
+    background: #6F4964; 
+    cursor: pointer; 
+    border-radius: 25px;
+}
+/* player feedback */
+.result{
+    visibility: hidden;
+    text-align: center;
+    margin-top: 0;
+    font-weight: 400;
+    font-style: italic;
+}
