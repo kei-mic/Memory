@@ -14,6 +14,9 @@ const matches = document.querySelector('#matches');
 const btn = document.querySelector('button');
 btn.addEventListener('click', createDeck);
 
+const reset = document.querySelector('.reset');
+reset.addEventListener('click', createDeck);
+
 let arr = Array(50).fill().map((x,i)=>i+1).sort(() => Math.random() - .5);//arr of all posible cards
 let deck = [];//arr to hold cards once difficulty selected
 let attemps = 0;//counter
@@ -98,15 +101,15 @@ function checkForMatch(){
         tileWon.push(tileChosen);//save match
     } else{ 
         tiles[tileId[0]].src = tiles[tileId[1]].src = `images/halloween-blank.png`;
-        matches.textContent = `No Match`       
     }     
     
     tileChosen.splice(0);//clear
     tileId.splice(0);//clear
     matches.innerHTML = `Matches: <strong>${tileWon.length}</strong> <span style="padding: 8px"></span> Guesses: <strong>${attemps/2}</strong>`;  
-    if(tileWon === deck.length){
-        matches.textContent = `Game Over! You found all the matches`;
-        difDiv.style.display = 'initial';
+    if(tileWon.length == slider.value){
+        // matches.textContent = `Game Over! You found all the matches`;
+        reset.style.display = 'flex';
+        difDiv.style.display = 'inherit';
     }
 
 }//end checkForMatch

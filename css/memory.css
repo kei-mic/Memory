@@ -66,6 +66,14 @@ button {
     font-weight: 600;
     font-size: 16px;
 }
+.reset{
+    display: none;
+    justify-content: center;
+    /* align-items: flex-end; */
+    margin: 0 auto;
+    padding: 24px 48px;
+    
+}
 /* difficulty range */
 #slider{
     display: flex;
